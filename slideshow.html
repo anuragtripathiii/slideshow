@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>imgae slideshow</title>
+    <style>
+         body{
+             background-color: black;
+         }
+        *{box-sizing: border-box}
+
+
+        .slideshow-container{
+            max-width: 380px;
+            position: relative;
+            margin: auto;
+        }
+        .myslide{
+            display: none;
+        }
+        img{
+            vertical-align: middle;
+        }
+        .prev,.next{
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: red;
+        }
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 40%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+         .dot:hover{
+            background-color:red;
+        }
+        .fade{
+            animation-name: fade;
+            animation-duration: 1s;
+        }
+        @keyframes fade {
+            from {
+                opacity: 0.4
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @media only screen and (max-width: 500px) {
+            .prev, .next,.text {font-size: 11px}
+        }
+
+    </style>
+</head>
+<body>
+<div class ="slideshow-container">
+
+
+    <div class="myslides fade">
+        <div class="numbertext">1/4</div>
+        <img src="Screen Shot 2020-02-16 at 12.10.17 PM.png" style="width:80%">
+        <div class="text">caption 1</div>
+    </div>
+
+    <div class="myslides fade">
+        <div class="numbertext">2/4</div>
+        <img src="Screen Shot 2020-02-16 at 12.10.27 PM.png" style="width:80%">
+        <div class="text">caption 2</div>
+    </div>
+
+
+    <div class="myslides fade">
+        <div class="numbertext">3/4</div>
+        <img src="Screen Shot 2020-02-16 at 12.10.34 PM.png" style="width:80%">
+        <div class="text">caption 3</div>
+    </div>
+
+
+    <div class="myslides fade">
+        <div class="numbertext">4/4</div>
+        <div class="text">caption 4</div>
+        <img src="Screen Shot 2020-02-16 at 12.57.30 PM.png" style="width:80%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+<div style="text-align: center">
+    <span class="dot" onclick="currentSlides(1)"></span>
+    <span class="dot" onclick="currentSlides(2)"></span>
+    <span class="dot" onclick="currentSlides(3)"></span>
+</div>
+
+
+</body>
+</html>
